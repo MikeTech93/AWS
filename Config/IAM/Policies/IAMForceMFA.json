@@ -6,7 +6,6 @@
             "Effect": "Allow",
             "Action": [
                 "iam:GetAccountPasswordPolicy",
-                
                 "iam:ListVirtualMFADevices"
             ],
             "Resource": "*"
@@ -90,6 +89,8 @@
             "Sid": "DenyAllExceptListedIfNoMFA",
             "Effect": "Deny",
             "NotAction": [
+                "iam:ChangePassword",
+                "iam:GetAccountPasswordPolicy",
                 "iam:CreateVirtualMFADevice",
                 "iam:EnableMFADevice",
                 "iam:GetUser",
