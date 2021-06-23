@@ -8,7 +8,7 @@ db_instances = rds.describe_db_instances()
 
 schedule_enabled_key = 'ScheduleEnabled'
 schedule_enabled_value = '1'
-current_hour = time.strftime('%H').lstrip('0')
+current_hour = time.strftime('%H').lstrip('0') # UTC Time
 start_enable_key = 'WakeAt'
 stop_enable_key = 'SleepAt'
 
