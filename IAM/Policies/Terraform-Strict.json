@@ -2,7 +2,7 @@
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "CustomPolicyForACGAWSTFCourse",
+      "Sid": "Terraform-Strict-Policy",
       "Action": [
         "ec2:Describe*",
         "ec2:Get*",
