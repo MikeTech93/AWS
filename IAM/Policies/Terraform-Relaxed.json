@@ -1,7 +1,7 @@
 {
 	"Version": "2012-10-17",
 	"Statement": [{
-		"Sid": "CustomLaxPolicyForACGAWSTFCourse",
+		"Sid": "Terraform-Relaxed-Policy",
 		"Action": [
 			"ec2:*",
 			"acm:*",
