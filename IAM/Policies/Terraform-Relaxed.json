@@ -1,7 +1,7 @@
 {
 	"Version": "2012-10-17",
 	"Statement": [{
-		"Sid": "Terraform-Relaxed-Policy",
+		"Sid": "TerraformRelaxedPolicy",
 		"Action": [
 			"ec2:*",
 			"acm:*",
