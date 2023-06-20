@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:DescribeParameters",
+                "ssm:GetParameters",
+                "ssm:GetParameter",
+                "ssm:GetParametersByPath"
+            ],
+            "Resource": [
+                "arn:aws:ssm:eu-west-1:123456789123:parameter/*/dev/*",
+                "arn:aws:ssm:eu-west-1:123456789123:parameter/*/staging/*",
+                "arn:aws:ssm:eu-west-1:123456789123:parameter/*/production/*"
+            ]
+        }
+    ]
+}
