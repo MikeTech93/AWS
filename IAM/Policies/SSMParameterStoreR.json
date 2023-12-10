@@ -10,9 +10,9 @@
                 "ssm:GetParametersByPath"
             ],
             "Resource": [
-                "arn:aws:ssm:eu-west-1:123456789123:parameter/*/dev/*",
-                "arn:aws:ssm:eu-west-1:123456789123:parameter/*/staging/*",
-                "arn:aws:ssm:eu-west-1:123456789123:parameter/*/production/*"
+                "arn:aws:ssm:eu-west-1:123456789123:parameter/dev/*",
+                "arn:aws:ssm:eu-west-1:123456789123:parameter/staging/*",
+                "arn:aws:ssm:eu-west-1:123456789123:parameter/production/*"
             ]
         }
     ]
