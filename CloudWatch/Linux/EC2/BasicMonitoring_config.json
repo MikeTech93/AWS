@@ -12,6 +12,13 @@
 			"InstanceType": "${aws:InstanceType}"
 		},
 		"metrics_collected": {
+			"cpu": {
+				"measurement": [
+					"cpu_usage_idle"
+				],
+				"metrics_collection_interval": 60,
+				"totalcpu": true
+			},
 			"disk": {
 				"measurement": [
 					"used_percent"
