@@ -4,7 +4,7 @@
 		"run_as_user": "root"
 	},
 	"metrics": {
-        "namespace": "CustomEC2Metrics/<ENV>/<INSTANCENAME>",
+        "namespace": "CustomEC2 - <ENV> - <INSTANCENAME>",
 		"append_dimensions": {
 			"AutoScalingGroupName": "${aws:AutoScalingGroupName}",
 			"ImageId": "${aws:ImageId}",
@@ -45,6 +45,22 @@
 				"resources": [
 					"*"
 				]
+			},
+			"nvidia_gpu": {
+				"measurement": [
+					"utilization_gpu",
+					"utilization_memory",
+					"memory_used",
+					"memory_total",
+					"memory_free",
+					"temperature_gpu",
+					"power_draw",
+					"clocks_current_graphics",
+					"clocks_current_sm",
+					"clocks_current_memory",
+					"clocks_current_video"
+				],
+				"metrics_collection_interval": 60
 			}
 		}
 	}

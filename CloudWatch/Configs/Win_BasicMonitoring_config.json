@@ -4,7 +4,7 @@
         "logfile": "c:\\ProgramData\\Amazon\\AmazonCloudWatchAgent\\Logs\\amazon-cloudwatch-agent.log"
     },
 	"metrics": {
-        "namespace": "CustomEC2Metrics/<ENV>/<INSTANCENAME>",
+        "namespace": "CustomEC2 - <ENV> - <INSTANCENAME>",
 		"append_dimensions": {
 			"AutoScalingGroupName": "${aws:AutoScalingGroupName}",
 			"ImageId": "${aws:ImageId}",
@@ -26,6 +26,27 @@
 					"% Committed Bytes In Use"
 				],
 				"metrics_collection_interval": 60
+			},
+			"Processor": {
+				"measurement": [
+					"% Processor Time"
+				],
+				"metrics_collection_interval": 60,
+				"resources": [
+					"*"
+				]
+			},
+			"Network Interface": {
+				"measurement": [
+					"Bytes Sent/sec",
+					"Bytes Received/sec",
+					"Packets Sent/sec",
+					"Packets Received/sec"
+				],
+				"metrics_collection_interval": 60,
+				"resources": [
+					"*"
+				]
 			}
 		}
 	}
