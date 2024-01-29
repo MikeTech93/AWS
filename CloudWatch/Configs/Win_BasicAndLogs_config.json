@@ -1,0 +1,79 @@
+{
+	"agent": {
+        "metrics_collection_interval": 60,
+        "logfile": "c:\\ProgramData\\Amazon\\AmazonCloudWatchAgent\\Logs\\amazon-cloudwatch-agent.log"
+    },
+	"logs": {
+		"logs_collected": {
+			"files": {
+				"collect_list": [
+					{
+						"file_path": "C:\\Temp\\Log\\<LOG_FILE_NAME>.log",
+						"log_group_name": "<CF_LOG_GROUP_NAME>",
+						"log_stream_name": "<CF_LOG_STREAM_NAME>",
+						"retention_in_days": 30
+					},
+					{
+						"file_path": "C:\\Temp\\Log\\<LOG_FILE_NAME>.log",
+						"log_group_name": "<CF_LOG_GROUP_NAME>",
+						"log_stream_name": "<CF_LOG_STREAM_NAME>",
+						"retention_in_days": 30
+					},
+					{
+						"file_path": "C:\\Temp\\Log\\<LOG_FILE_NAME>.log",
+						"log_group_name": "<CF_LOG_GROUP_NAME>",
+						"log_stream_name": "<CF_LOG_STREAM_NAME>",
+						"retention_in_days": 30
+					}
+				]
+			}
+		}
+	},
+	"metrics": {
+        "namespace": "CustomEC2 - <ENV> - <INSTANCENAME>",
+		"append_dimensions": {
+			"AutoScalingGroupName": "${aws:AutoScalingGroupName}",
+			"ImageId": "${aws:ImageId}",
+			"InstanceId": "${aws:InstanceId}",
+			"InstanceType": "${aws:InstanceType}"
+		},
+		"metrics_collected": {
+			"LogicalDisk": {
+				"measurement": [
+					"% Free Space"
+				],
+				"metrics_collection_interval": 60,
+				"resources": [
+					"*"
+				]
+			},
+			"Memory": {
+				"measurement": [
+					"% Committed Bytes In Use"
+				],
+				"metrics_collection_interval": 60
+			},
+			"Processor": {
+				"measurement": [
+					"% Processor Time"
+				],
+				"metrics_collection_interval": 60,
+				"resources": [
+					"*"
+				]
+			},
+			"Network Interface": {
+				"measurement": [
+					"Bytes Sent/sec",
+					"Bytes Received/sec",
+					"Packets Sent/sec",
+					"Packets Received/sec"
+				],
+				"metrics_collection_interval": 60,
+				"resources": [
+					"*"
+				]
+			}
+		}
+	}
+}
