@@ -44,4 +44,11 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatc
         .\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a status
 
 # Check new metrics exist in CloudWatch
+
+# If you have issues check the CloudWatch Agent logs
+    # Windows
+        C:\ProgramData\Amazon\AmazonCloudWatchAgent\Logs
+
+    # Linux
+        /opt/aws/amazon-cloudwatch-agent/logs/
 ```
