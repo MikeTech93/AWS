@@ -2,6 +2,7 @@
 remove_these.csv
 results.csv
 temp.py
+temp.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
