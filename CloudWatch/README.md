@@ -12,7 +12,6 @@
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html
     # Linux	
         sudo yum install amazon-cloudwatch-agent
-
         sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
 
     # Windows	
@@ -34,14 +33,11 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatc
 # Restart CloudWatch agent
     # Linux
         sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a fetch-config -c file:'/opt/aws/amazon-cloudwatch-agent/bin/config.json' -s
-
         sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
     
     # Windows
-		cd 'C:\Program Files\Amazon\AmazonCloudWatchAgent\'
-
+        cd 'C:\Program Files\Amazon\AmazonCloudWatchAgent\'
         .\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a fetch-config -c file:'C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json' -s
-
         .\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a status
 
 # Check new metrics exist in CloudWatch
