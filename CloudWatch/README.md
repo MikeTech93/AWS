@@ -1,5 +1,20 @@
 # How to set custom metrics configuration (Linux & Windows)
 ```bash
+# Before configure custom CloudWatch policies you need to ensure that SSM will not overwrite the documents
+    # Login to AWS console and navigate to SSM > Node Management > State Manager
+        https://eu-west-2.console.aws.amazon.com/systems-manager/state-manager/
+
+    # Find the document that is titled: UpdateCloudWatchDocument
+
+    # Edit the document
+
+    # Set the Target Selection option to: Specify Instance Tags
+
+    # Create a new tag/value combination that will not be used e.g.
+        DO NOT RUN / DO NOT RUN
+
+    # Save and exit
+
 # Check CloudWatch agent is installed
     # Windows
         cd 'C:\Program Files\Amazon\AmazonCloudWatchAgent\'
