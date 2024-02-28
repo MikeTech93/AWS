@@ -32,6 +32,12 @@
                 "s3:PutObjectAcl"
             ],
             "Resource": ["arn:aws:s3:::BUCKET-ARN/*"]
+        },
+        {
+            "Sid": "DeleteObjectAction",
+            "Effect": "Allow",
+            "Action": "s3:DeleteObject",
+            "Resource": "arn:aws:s3:::BUCKET-ARN/*"
         }
     ]
 }
