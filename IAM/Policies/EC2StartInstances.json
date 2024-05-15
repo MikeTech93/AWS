@@ -1,0 +1,22 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+      "Sid": "AllowDescribeInstancesForGuiAccess"
+			"Effect": "Allow",
+			"Action": "ec2:DescribeInstances",
+			"Resource": "*"
+		},
+		{
+			"Sid": "AllowStartInstances",
+			"Effect": "Allow",
+			"Action": "ec2:StartInstances",
+			"Resource": [
+				"arn:aws:ec2:eu-west-2:123456789123:instance/i-01234567891234567",
+				"arn:aws:ec2:eu-west-2:123456789123:instance/i-01234567891234568",
+				"arn:aws:ec2:eu-west-2:123456789123:instance/i-01234567891234569",
+				"arn:aws:ec2:eu-west-2:123456789123:instance/i-01234567891234561"
+			]
+		}
+	]
+}
