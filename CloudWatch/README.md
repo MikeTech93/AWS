@@ -42,10 +42,10 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatc
         cd /opt/aws/amazon-cloudwatch-agent/bin/
         vim /opt/aws/amazon-cloudwatch-agent/bin/config.json
 
-    # Windows
+    # Windows (File Explorer / Notepad)
         C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json
 
-# Restart CloudWatch agent
+# Restart CloudWatch agent with the new configuration
     # Linux
         sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a fetch-config -c file:'/opt/aws/amazon-cloudwatch-agent/bin/config.json' -s
         sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
