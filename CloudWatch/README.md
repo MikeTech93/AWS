@@ -40,7 +40,7 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatc
 # Copy the config file to the relevant place
     # Linux
         cd /opt/aws/amazon-cloudwatch-agent/bin/
-        vim /opt/aws/amazon-cloudwatch-agent/bin/config.json
+        sudo vim /opt/aws/amazon-cloudwatch-agent/bin/config.json
 
     # Windows (File Explorer / Notepad)
         C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json
